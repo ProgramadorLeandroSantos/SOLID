@@ -9,11 +9,11 @@ class Payment{
         this.paymentData = paymentData
     }
 
-    paymentGate(){
+    pay(){
         const {method,paymentValue} = this.paymentData;
         method.generatePayment(paymentValue)
     }
 }
 
 var newPayment = new Payment(Mock.ticket);
-newPayment.paymentGate();
+newPayment.pay();
