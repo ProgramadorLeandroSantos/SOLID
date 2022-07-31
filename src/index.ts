@@ -1,19 +1,25 @@
-// SOLID
+// SRP - Single Responsibility Principle
+// OCP — Open-Closed Principle
+// LSP— Liskov Substitution Principle
+
 import * as Types from './Types';
 import * as Mock from './MockTicket';
+import * as Services from './Service/Payment';
 
-class Payment{
-    paymentData: Types.PaymentDataProps
+class Card extends Services.Payment {
+    cardNumber: string
 
-    constructor(paymentData:Types.PaymentDataProps){
-        this.paymentData = paymentData
+    constructor(cardNumber: string, paymentData:Types.PaymentDataProps){
+        super(paymentData)
+        this.cardNumber = cardNumber
     }
-
-    pay(){
-        const {method,paymentValue} = this.paymentData;
-        method.generatePayment(paymentValue)
+    showInfo(){
+        console.log(`CARD NUMBER => ${this.cardNumber}`);
     }
 }
 
-var newPayment = new Payment(Mock.ticket);
-newPayment.pay();
+const card = new Card('125335676',Mock.DebitPaymentTicket);
+const paymentWithoutCard = new Services.Payment(Mock.creditPaymentTicket);
+
+paymentWithoutCard.pay()
+card.pay()
