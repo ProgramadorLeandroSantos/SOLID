@@ -1,23 +1,14 @@
-export class CreditPayment {
-    paymentValue: string
-
-    constructor(paymentValue:string){
-        this.paymentValue = paymentValue
-    }
-
-    genaratePayment(){
-        console.log(`Credit payment realized R$ ${this.paymentValue}`)
+interface Genarate {
+    genaratePayment:(paymentValue:string)=> void,
+}
+export class CreditPayment implements Genarate{
+    genaratePayment(paymentValue:string){
+        console.log(`Credit payment realized R$ ${paymentValue}`)
     }
 }
 
-export class DebitPayment {
-    paymentValue: string
-
-    constructor(paymentValue:string){
-        this.paymentValue = paymentValue
-    }
-
-    genaratePayment(){
-        console.log(`Debit payment realized R$ ${this.paymentValue}`)
+export class DebitPayment implements Genarate{
+    genaratePayment(paymentValue:string){
+        console.log(`Debit payment realized R$ ${paymentValue}`)
     }
 }

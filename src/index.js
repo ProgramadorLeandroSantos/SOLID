@@ -1,5 +1,4 @@
 "use strict";
-// SRP - SINGLE RESPONSIBILITY PRINCIPLE
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     var desc = Object.getOwnPropertyDescriptor(m, k);
@@ -25,23 +24,13 @@ var __importStar = (this && this.__importStar) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const Mock = __importStar(require("./MockTicket"));
-const PaymentMethod = __importStar(require("./Paymentmethods"));
 class Payment {
     constructor(paymentData) {
         this.paymentData = paymentData;
     }
     paymentGate() {
         const { method, paymentValue } = this.paymentData;
-        switch (method) {
-            case 'CREDIT':
-                const creditPaymentGate = new PaymentMethod.CreditPayment(paymentValue);
-                return creditPaymentGate.genaratePayment();
-            case 'DEBIT':
-                const debitPaymentGate = new PaymentMethod.DebitPayment(paymentValue);
-                return debitPaymentGate.genaratePayment();
-            default:
-                break;
-        }
+        method.genaratePayment(paymentValue);
     }
 }
 var newPayment = new Payment(Mock.ticket);

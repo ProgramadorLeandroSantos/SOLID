@@ -2,20 +2,14 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.DebitPayment = exports.CreditPayment = void 0;
 class CreditPayment {
-    constructor(paymentValue) {
-        this.paymentValue = paymentValue;
-    }
-    genaratePayment() {
-        console.log(`Credit payment realized R$ ${this.paymentValue}`);
+    genaratePayment(paymentValue) {
+        console.log(`Credit payment realized R$ ${paymentValue}`);
     }
 }
 exports.CreditPayment = CreditPayment;
 class DebitPayment {
-    constructor(paymentValue) {
-        this.paymentValue = paymentValue;
-    }
-    genaratePayment() {
-        console.log(`Debit payment realized R$ ${this.paymentValue}`);
+    genaratePayment(paymentValue) {
+        console.log(`Debit payment realized R$ ${paymentValue}`);
     }
 }
 exports.DebitPayment = DebitPayment;

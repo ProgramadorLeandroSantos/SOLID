@@ -1,5 +1,7 @@
+import { CreditPayment,DebitPayment } from "../Paymentmethods";
+
 // @ts-ignore: Unreachable code error
 export const ticket: PaymentDataProps = {
-   method: 'DEBIT',
-   paymentValue: '1.000,00'
+   method:  new DebitPayment,
+   paymentValue: '2.300,00'
 };
