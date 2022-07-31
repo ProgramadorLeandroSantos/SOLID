@@ -3,7 +3,7 @@
 
 import * as Types from '../Types';
 
-export class Payment{
+export default class Payment{
     paymentData: Types.PaymentDataProps
 
     constructor(paymentData:Types.PaymentDataProps){

@@ -4,9 +4,9 @@
 
 import * as Types from './Types';
 import * as Mock from './MockTicket';
-import * as Services from './Service/Payment';
+import Payment from './Service/Payment';
 
-class Card extends Services.Payment {
+class Card extends Payment {
     cardNumber: string
 
     constructor(cardNumber: string, paymentData:Types.PaymentDataProps){
@@ -19,7 +19,7 @@ class Card extends Services.Payment {
 }
 
 const card = new Card('125335676',Mock.DebitPaymentTicket);
-const paymentWithoutCard = new Services.Payment(Mock.creditPaymentTicket);
+const paymentWithoutCard = new Payment(Mock.creditPaymentTicket);
 
 paymentWithoutCard.pay()
 card.pay()
