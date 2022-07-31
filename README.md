@@ -4,4 +4,4 @@
 2 -`node src/` to run the study file.<br/>
 3 - Edit the `MockTicket` for output changes.
 
-######  Note: exit in the terminal.
+######  Note: output in the terminal.
