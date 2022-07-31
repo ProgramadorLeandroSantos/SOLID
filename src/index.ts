@@ -1,4 +1,4 @@
-// SRP - SINGLE RESPONSIBILITY PRINCIPLE
+// SOLID
 
 import * as Types from './Types';
 import * as Mock from './MockTicket';
