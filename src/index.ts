@@ -11,7 +11,7 @@ class Payment{
 
     paymentGate(){
         const {method,paymentValue} = this.paymentData;
-        method.genaratePayment(paymentValue)
+        method.generatePayment(paymentValue)
     }
 }
 

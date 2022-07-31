@@ -7,6 +7,6 @@ export interface PaymentDataProps {
     paymentValue: string,
 }
 
-export interface Genarate {
-    genaratePayment:(paymentValue:string)=> void,
+export interface Generate {
+    generatePayment:(paymentValue:string)=> void,
 }

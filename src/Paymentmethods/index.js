@@ -2,13 +2,13 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.DebitPayment = exports.CreditPayment = void 0;
 class CreditPayment {
-    genaratePayment(paymentValue) {
+    generatePayment(paymentValue) {
         console.log(`Credit payment realized R$ ${paymentValue}`);
     }
 }
 exports.CreditPayment = CreditPayment;
 class DebitPayment {
-    genaratePayment(paymentValue) {
+    generatePayment(paymentValue) {
         console.log(`Debit payment realized R$ ${paymentValue}`);
     }
 }

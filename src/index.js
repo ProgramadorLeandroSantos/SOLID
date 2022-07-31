@@ -30,7 +30,7 @@ class Payment {
     }
     paymentGate() {
         const { method, paymentValue } = this.paymentData;
-        method.genaratePayment(paymentValue);
+        method.generatePayment(paymentValue);
     }
 }
 var newPayment = new Payment(Mock.ticket);
