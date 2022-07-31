@@ -1,6 +1,5 @@
-interface Genarate {
-    genaratePayment:(paymentValue:string)=> void,
-}
+import { Genarate } from "../Types"
+
 export class CreditPayment implements Genarate{
     genaratePayment(paymentValue:string){
         console.log(`Credit payment realized R$ ${paymentValue}`)
