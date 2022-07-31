@@ -1,7 +1,7 @@
-# ARQUIVO DE ESTUDO DO SOLID.
+# SOLID STUDY FILE.
 
-1 -`tsc -p ./` para compilar os arquivos ts e gerar os arquivos js.<br/>
-2 -`node src/` para rodar o arquivo de estudo.<br/>
-3 - Editar o `MockTicket` para mudanças na saída.
+1 -`tsc -p ./` to compile the ts files and generate the js files.<br/>
+2 -`node src/` to run the study file.<br/>
+3 - Edit the `MockTicket` for output changes.
 
-######  Obs: saida no terminal.
+######  Note: output in the terminal.
